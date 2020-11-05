@@ -1,14 +1,17 @@
-const jokeCard = (jokeObject) => {
-  $('#app').html(`<div class="card m-2" style="width: 18rem;" id="${jokeObject.id}">
-  <div class="card-body">
-    <button type="button" id="${jokeObject.id}" class="btn btn-secondary joke">Joke</button>
-    <button type="button" id="${jokeObject.id}" class="btn btn-success punchline">Punchline</button>
-  </div>`);
+import thisJoke from '../helpers/data/jokeData';
 
-  $('body').on('click', '.joke', '.punchline', (e) => {
-    e.stopImmediatePropagation();
-    $(`.card#${jokeObject.id}`);
+const showJoke = () => {
+  $('#showTheJoke').on('click', () => {
+    $('#show').html('');
+    $('#punchline').html('');
+    thisJoke.getJoke().then((response) => {
+      console.warn(response);
+      $('#show').html(`${response.setup}`);
+      $('#showPunchline').on('click', () => {
+        $('#punchline').html(`${response.punchline}`);
+      });
+    });
   });
 };
 
-export default { jokeCard };
+export default { showJoke };
