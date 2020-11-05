@@ -2,8 +2,20 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
-  color: brown;
+  background-color: rgb(61, 90, 128);
+  color: rgb(238, 108, 77);
   text-align: center;
   margin-top: 100px;
+}
+
+.btn-joke {
+  background-color: rgb(152, 193, 217);
+  color: white;
+  border-radius: 25px;
+}
+
+.btn-punchline {
+  background-color: rgb(41, 50, 65);
+  color: white;
+  border-radius: 25px;
 }

@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+const baseUrl = 'https://official-joke-api.appspot.com/random_joke';
+
 const getJoke = () => new Promise((resolve, reject) => {
-  axios.get('https://official-joke-api.appspot.com/random_joke')
+  axios
+    .get(`${baseUrl}`)
     .then((response) => {
       const thisJoke = response.data;
       resolve(thisJoke);
@@ -9,12 +12,4 @@ const getJoke = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const getPunchline = () => new Promise((resolve, reject) => {
-  axios.get('https://official-joke-api.appspot.com/random_joke')
-    .then((response) => {
-      const thisPunchline = response.data;
-      resolve(thisPunchline);
-    }).catch((error) => reject(error));
-});
-
-export default { getJoke, getPunchline };
+export default { getJoke };
