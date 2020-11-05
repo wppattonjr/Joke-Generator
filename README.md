@@ -14,3 +14,7 @@
  - jQuery
  
 ## Build Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/38f92440-9de1-426d-8279-7c8dff32ba33/deploy-status)](https://app.netlify.com/sites/wendellp-jokegenerator/deploys)
+
+[Live Site](https://wendellp-jokegenerator.netlify.app/)
